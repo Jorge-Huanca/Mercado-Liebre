@@ -1,104 +1,268 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
 :root {
---amarillo:#EAC926;
---azul:#03264C;
---celeste:#1259c3;
---gris-oscuro:#666;
---gris-claro:#ebebeb;
---verde:#39b54a;
---fuente:'Roboto',sans-serif;
---parrafos: 12px;
---titulos:24px;
---precio:18px;
---descuento:16px;
---descripcion:16px;
+    --color-amarillo:#EAC926;
+    --color-azul:#03264C;
+    --color-celeste:#1259c3;
+    --color-gris-oscuro: #666;
+    --color-gris-claro: #ebebeb;
+    --color-verde: #39b54a;
+    --color-negro:#000;
+    --color-blanco:#ffffff;
 }
+
 *{
-    margin:0;
-    padding:0;
-    font-family: var(--fuente);
-    
+    padding: 0;
+    margin: 0; 
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+} 
+li{
+    list-style-type: none;
 }
 a {
-    color:black;
     text-decoration: none;
+    color: var(--color-negro);
+    cursor:pointer;
 }
-li{
-    list-style: none;
+
+/*version mobile*/
+.home_header {
+    background-color: var(--color-amarillo);
+    font-family: "Roboto", sans-serif;
+    align-self: flex-start;
+    width: 100%;
 }
-p{
-    font-size: var(--parrafos);
+
+.home_header img {
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
 }
-h5{
+
+.searchBar_header {
+    padding-top: 2.5%;
+    padding-left: 2.4%;
+}
+.searchBar_header #search{
+    border-top: 1px solid var(--color-negro);
+}
+
+.fa-magnifying-glass {
+    border: 1px solid var(--color-negro);
+    background-color: var(--color-blanco);
+    padding: 1%;
+    margin-top: 0.5%;
+}
+
+.compra_cuotas_home p{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+
+
+.home_nav ul{
+    display: none;
+}
+
+.home_nav .login_bar{
+    display: none;
+}
+
+.burger-menu .fa-bars{
+    background-color: var(--color-celeste);
+    padding: 3%;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    border-radius: 15%;
+    
+}
+.burger-menu{
+    text-align: center;
+}
+
+.home_body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    background-color: var(--color-gris-claro);
+}
+.home_main{
+    width: 90%;
+}
+.home_main section{
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.home_main section article div i{
+    color: var(--color-verde);
+    padding: 2% 5% 5% 2%;
+    border:1px solid var(--color-verde);
+    border-radius: 100%;
+}
+
+.home_banner {
+    width: 100vw;
+}
+.home_ultimavisita h3{
+    font-size: 24px;
+    margin-left: 3%;
+    color: var(--color-gris-oscuro);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+.home_main section article div h5{
+    font-size: 18px;
+}
+.home_main section article div h4{
+    display: none;
+}
+
+
+.home_main section article div p{
     font-size: 16px;
+    display: inline;
+    color: var(--color-verde);
 }
-body{
-    background-color: var(--gris-claro);
+
+.home_ofertas h3{
+    font-size:24px;
+    margin-left: 4%;
+    color: var(--color-gris-oscuro);
+    padding-bottom: 5%;
 }
-header{
-    background-color: var(--amarillo);
-    padding: 25px 0;
+
+
+.home_main{
+    background-color: var(--color-gris-claro);
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
-header div.logo{
-    width: 130px;
-    margin-left: 25px;
+
+.home_main section article img {
+    width: 100%;
+    height: 100%;
 }
-header div.busqueda{
-    margin-left: 15px;
-    width: 166px;
+
+.home_main section article {
+    background-color: var(--color-blanco);
     margin-bottom: 10px;
 }
-header p{
-    text-align: center;
-    margin-bottom: 15px;
-}
-header nav ul.lista-superior{
-    margin-bottom: 15px;
-}
-header nav ul li a{
-    font-size: var(--parrafos);
-}
-header div.burger-menu{
-    background-color: var(--celeste);
-    border-radius: 5px;
-    color: white;
-    width: 15px;
-    padding: 7px;
-    margin: 25px auto 0;
-}
-main section h4.seccion__productos--titulo{
-    font-size: var(--titulos);
-    margin: 10px 0px 10px
-}
-main section article p.precio{
-    font-size: 18px;
+
+.home_main section article div {
+    border-top: 1px solid var(--color-gris-claro);
+    padding:15px;
 }
 
 footer{
-    padding: 50px 10px 10px;
-    background-color: white;
-    margin:10px 5px
+    margin-top:4%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-blanco);
+    padding-top: 5%;
 }
-footer article{
+
+footer article {
     text-align: center;
-    margin-bottom: 50px;
 }
+footer article h3{
+    font-size: 16px;
+    color: var(--color-gris-oscuro);
+}
+footer article p{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 60px;
+    margin-top: 5px;
+}
+
 footer article i{
+    color: var(--color-celeste);
     font-size: 2em;
-    color: var(--celeste);
     margin-bottom: 10px;
 }
-footer span{
-    font-size: var(--parrafos);  
+
+footer .copyright p {
+    align-self: flex-start;
+    font-size: 12px;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 60px;
+    margin-left: 1%;
 }
-main section.home__seccion-productos{
-    margin: 10px 20px;
+
+/* VERSION TABLET */
+@media(min-width:361px){
+    .home_nav ul{
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        margin-left: 2%;
+    }
+    
+    .home_nav .login_bar{
+        display: block;
+        margin-top: 0%;
+        margin-left: 2%;
+        margin-bottom: 4%;
+    }
+    .burger-menu{
+        display: none;
+    }
+
+    .home_header img {
+        width: 35%;
+        margin-top: 3%;
+        margin-left: 4%;
+    }
+    .fa-magnifying-glass {
+        padding: 0.2%;
+    }
+    .searchBar_header {
+        padding-top: 1%;
+    }
+
+    .home_main section article div h4{
+        display: block;
+        padding-top:2%;
+        color: var(--color-gris-oscuro);
+    }
+    .home_main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .home_main section article div i{
+        padding: 1% 2% 2% 1%;
+    }
+    .home_ultimavisita div h3{
+        margin-left: 1%;
+        padding-top: 3%;
+        padding-bottom: 4%;
+    }
+    .home_ofertas h3{
+        margin-left: 1%;
+    }
+
 }
-main section.productos{
-    margin: 10px 20px;
-}
-main section article{
-    background-color: white;
-    margin: 10px 0px;
-    padding: 20px;
+
+/* VERSION DESKTOP */
+@media(min-width:769px){
+    .home_header img {
+        width: 25%;
+        margin-top: 3%;
+        margin-left: 3%;
+    }
+    .home_ultimavisita h3{
+        padding-top: 1%;
+    }
+    .home_ofertas h3{
+        padding-bottom: 4%;
+    }
 }
