@@ -115,7 +115,11 @@ a {
     height: 30px;
     margin-top: -28px;
     background-color: white;
+    transition: all 1s;
 }
+.fa-truck:hover{
+    transform: rotateZ(-90deg)
+    }
 
 .home_banner {
     width: 100vw;
@@ -171,8 +175,13 @@ a {
 }
 
 .home_main section article {
+    box-shadow: 0px 0px 0px rgb(100, 100, 100);
     background-color: var(--color-blanco);
     margin-bottom: 10px;
+    transition: all 1s;
+}
+.home_main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 /*footer*/
 footer{
@@ -201,6 +210,7 @@ footer article i{
     color: var(--color-celeste);
     font-size: 2em;
     margin-bottom: 10px;
+    transition: all 0.5s;
 }
 
 footer .copyright p {
@@ -208,6 +218,9 @@ footer .copyright p {
     color: var(--color-gris-oscuro);
     margin-bottom: 60px;
     margin-left: 1%;
+}
+footer article i:hover{
+    color: #0022AA;
 }
 
 /* VERSION TABLET header */
@@ -277,6 +290,11 @@ footer .copyright p {
         display: block;
         padding-top:2%;
         color: var(--color-gris-oscuro);
+        opacity: 0%;
+        transition: all, 1s;
+    }
+    .home_main section article div h4:hover{
+        opacity:100%;
     }
     .home_ultimavisita h3{
         width: 100%;
@@ -293,16 +311,24 @@ footer .copyright p {
         padding-right: 0%;
     }
     .home_main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow: 0px 0px 0px rgb(100, 100, 100);
         width: 45%;
         display: flex;
         flex-direction: column;
-        
+        transition: all 1s;
+    }
+    .home_main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .fa-truck{
         padding: 1.8%;
+        transition: all 1s;
     }
-    
+
+    .fa-truck:hover{
+    transform: rotateZ(-90deg)
+    }
+
     .home_ofertas h3{
         margin-left: 1%;
         width: 100%;
@@ -374,7 +400,7 @@ footer .copyright p {
         opacity:100%;
     }
     .fa-truck{
-        padding: 3%;
+        padding: 2%;
         transition: all 1s;
     }
     .fa-truck:hover{
